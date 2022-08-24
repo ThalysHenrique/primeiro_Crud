@@ -1,0 +1,12 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: purple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+
+.index{
+    margin: 20px;
+}

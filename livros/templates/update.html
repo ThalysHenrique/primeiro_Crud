@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+        <title>CRUD - Editar</title>
+</head>
+<body>
+        <h1>Edite seu texto :)</h1>
+
+        {{ livro.id }} - {{ livro.nome }}
+
+        <form action="{% url 'update' livro.id %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="nome" value="{{ livro.nome }}">
+            <button type="submit">Salvar</button>
+        </form>
+<br>
+        <a href="{% url 'home' %}">Voltar</a>
+</body>
+</html>
